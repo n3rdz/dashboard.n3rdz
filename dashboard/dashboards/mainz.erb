@@ -1,0 +1,52 @@
+<script type='text/javascript'>
+$(function() {
+  // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
+  Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},{"col":2,"row":3,"size_x":4,"size_y":1},{"col":1,"row":2,"size_x":1,"size_y":1},{"col":3,"row":1,"size_x":3,"size_y":2},{"col":2,"row":1,"size_x":1,"size_y":2}]')
+  Dashing.widget_base_dimensions = [370, 340]
+  Dashing.numColumns = 5
+});
+</script>
+
+
+<% content_for :title do %>Dashboard Junges Angebot von ARD&ZDF<% end %>
+
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-view="Clock" 
+      style="background-color:#666666;"></div>
+      <i class="fa fa-clock-o icon-background"></i>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="4" data-sizey="1">
+      <div data-id="twitter_mentions" 
+      data-view="Tweets" 
+      style="background-color:#666666;" 
+      data-moreinfo=""></div>
+      <i class="fa fa-twitter icon-background"></i>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1" ondblclick="location.href='https://twitter.com/hagertoni';">
+      <div data-id="twitter_user_followers" 
+      data-view="Number" 
+      data-title="Twitter Follower von @hagertoni" 
+      style="background-color: #666666"></div>
+      <i class="fa fa-twitter icon-background"></i>
+    </li>
+
+      <li data-row="1" data-col="1" data-sizex="3" data-sizey="2">
+       <div data-id="google_calendar" 
+       data-view="GoogleCalendar" 
+       style=" background-color:#666666;"></div>
+     <i class="fa fa-calendar icon-background"></i>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
+      <div data-id="startup_quote"
+       data-view="Image"
+       data-title="Startup quote"
+       style="background-color:#666666;">
+  </div>
+</li>
+  </ul>
+</div>
