@@ -10,16 +10,30 @@ class Dashing.GoogleCalendar extends Dashing.Widget
 
     start = moment(event.start)
     end = moment(event.end)
+    location = (event.location)
+    description = (event.description)
 
     @set('event',event)
-    @set('event_date', start.format('dddd Do MMMM'))
-    @set('event_times', start.format('HH:mm') + " - " + end.format('HH:mm'))
+    
+    @set('event_date', start.locale('de').format('L'))
+    @set('event_times', start.locale('de').format('LT') + " - " + end.locale('de').format('LT'))
+    
+    @set('event_location', location)
+    @set('event_description', description)
 
     next_events = []
     for next_event in rest
+      
       start = moment(next_event.start)
-      start_date = start.format('Do MMM')
-      start_time = start.format('HH:mm')
+      end = moment(next_event.end)
+      
+      start_date = start.locale('de').format('L')
+      start_time = start.locale('de').format('LT')
+      end_time = end.locale('de').format('LT')
 
-      next_events.push { summary: next_event.summary, start_date: start_date, start_time: start_time, }
+      
+      location = location
+      description = description
+
+      next_events.push { summary: next_event.summary, start_date: start_date, start_time: start_time, end_time: end_time, location : next_event.location, description:next_event.description }
     @set('next_events', next_events)

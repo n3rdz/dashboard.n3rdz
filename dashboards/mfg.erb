@@ -1,0 +1,35 @@
+<script type='text/javascript'>
+$(function() {
+  // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
+  Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":1,"size_y":1},{"col":1,"row":2,"size_x":2,"size_y":1},{"col":2,"row":1,"size_x":1,"size_y":1},{"col":3,"row":1,"size_x":3,"size_y":2},{"col":1,"row":3,"size_x":5,"size_y":1}]')
+  Dashing.widget_base_dimensions = [370, 340]
+  Dashing.numColumns = 4
+});
+</script>
+
+
+<div class="gridster">
+    <ul>
+        
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+            <div data-id="my_widget" data-view="Text"></div>
+        </li>
+        
+        
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+            <div data-view="SAD_Clock" style="background-color:#666666;"></div>
+            <i class="fa fa-clock-o icon-background"></i>
+        </li>
+        
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1"> 
+            <div data-id="visitor_count" data-view="Number" data-title="Besucher diesen Monat"></div> 
+        </li>
+        
+         <li data-row="1" data-col="1" data-sizex="1" data-sizey="1"> 
+            <div data-id="sad_analytics_events" data-view="Number" data-title="Besucher diesen Monat"></div> 
+        </li>
+         
+        
+    </ul>
+</div>
+

@@ -2,6 +2,8 @@
 <td class="times" data-bind="event_date"></td>
 <h2 class="title" data-bind="event.summary"></h2>
 <h3 class="times" data-bind="event_times"></h3>
+<h4 class="times" data-bind="event_location"></h4>
+<h4 class="times" data-bind="event_description"></h4>
 <h4 data-bind="next_count"></h4>
 
 <table class="next">
@@ -9,7 +11,10 @@
     <td data-bind="e.start_date"></td>
     <td data-bind="e.start_time"></td>
     <td> - </td>
+    <td data-bind="e.end_time"></td>
     <td data-bind="e.summary"></td>
+    <td data-bind="e.location"></td>
+    <td data-bind="e.description"></td>
   </tr>
 </table>
 

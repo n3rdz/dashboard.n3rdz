@@ -3,7 +3,7 @@ require 'icalendar'
 ical_url = 'https://calendar.google.com/calendar/ical/4ii3po665g3s2512bkafond3dg%40group.calendar.google.com/private-1a4b8310596be245f71b6a2d69fb7050/basic.ics'
 uri = URI ical_url
 
-SCHEDULER.every '15s', :first_in => 4 do |job|
+SCHEDULER.every '15s', :first_in => 0 do |job|
   parsed_url = URI.parse(ical_url)
 http = Net::HTTP.new(parsed_url.host, parsed_url.port)
 http.use_ssl = (parsed_url.scheme == "https")
@@ -16,7 +16,9 @@ result = http.request(req).body.force_encoding('UTF-8')
     {
       start: event.dtstart,
       end: event.dtend,
-      summary: event.summary
+      summary: event.summary,
+      location: event.location,
+      description: event.description
     }
   end.select { |event| event[:start] > DateTime.now }
 
