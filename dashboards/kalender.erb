@@ -1,0 +1,33 @@
+<script type='text/javascript'>
+ $(function() {
+   Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":2,"size_y":1},{"col":3,"row":1,"size_x":2,"size_y":1},{"col":3,"row":2,"size_x":2,"size_y":1}]')
+ });
+ </script>
+
+<% content_for :title do %>Dashboard Junges Angebot von ARD&ZDF<% end %>
+
+<div class="gridster">
+  <ul>
+      <li data-row="1" data-col="1" data-sizex="3" data-sizey="1">
+       <div data-id="google_calendar" 
+       data-view="GoogleCalendar2" 
+       style=" background-color:#0B610B;"></div>
+     <i class="fa fa-calendar icon-background"></i>
+
+     <li data-row="2" data-col="2" data-sizex="2" data-sizey="1">
+       <div data-id="google_calendar2" 
+       data-view="GoogleCalendar2" 
+       style=" background-color:#0B780B;"></div>
+     <i class="fa fa-calendar icon-background"></i>
+
+     <li data-row="3" data-col="2" data-sizex="2" data-sizey="1">
+       <div data-id="google_calendar2" 
+       data-view="GoogleCalendar2" 
+       style=" background-color:#0B6999;"></div>
+     <i class="fa fa-calendar icon-background"></i>
+
+    </li>
+  </div>
+</li>
+  </ul>
+</div>

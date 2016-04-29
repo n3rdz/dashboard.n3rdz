@@ -1,6 +1,6 @@
 require 'icalendar'
 
-ical_url = 'https://calendar.google.com/calendar/ical/jungesangebotvonardundzdf%40gmail.com/private-67e9ccd9bfdb073f01b6f6717783a593/basic.ics'
+ical_url = 'https://calendar.google.com/calendar/ical/r149rbm2tmjubreoior388ka84%40group.calendar.google.com/private-5a4d1a4405c262a69397d4539dc98209/basic.ics'
 uri = URI ical_url
 
 SCHEDULER.every '15s', :first_in => 0 do |job|
@@ -26,5 +26,5 @@ result = http.request(req).body.force_encoding('UTF-8')
 
   events = events[0..8]
 
-  send_event('google_calendar', { events: events })
+  send_event('google_calendar3', { events: events })
 end
