@@ -15,8 +15,8 @@ class Dashing.GoogleCalendar extends Dashing.Widget
 
     @set('event',event)
     
-    @set('event_date', start.locale('de').format('L'))
-    @set('event_times', start.locale('de').format('LT') + " - " + end.locale('de').format('LT'))
+    @set('event_date', start.locale('de').format('LL'))
+    @set('event_times', start.locale('de').format('LLLL') + " - " + end.locale('de').format('LT'))
     
     @set('event_location', location)
     @set('event_description', description)
