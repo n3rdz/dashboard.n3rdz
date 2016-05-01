@@ -1,4 +1,5 @@
 require 'icalendar'
+require 'active_support/all'
 
 ical_url = 'https://calendar.google.com/calendar/ical/19ubcgljmqvli1qpvk777l5hcc%40group.calendar.google.com/private-ec720eecfb140c19e627e594d1a972bf/basic.ics'
 uri = URI ical_url

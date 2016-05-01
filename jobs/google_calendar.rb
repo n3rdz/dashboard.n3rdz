@@ -1,4 +1,5 @@
 require 'icalendar'
+require 'active_support/all'
 
 ical_url = 'https://calendar.google.com/calendar/ical/jungesangebotvonardundzdf%40gmail.com/private-67e9ccd9bfdb073f01b6f6717783a593/basic.ics'
 uri = URI ical_url

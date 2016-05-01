@@ -7,6 +7,7 @@ gem 'google-api-client', '>= 0.8'
 gem 'keen'
 gem 'dotenv'
 gem 'simple-rss'
+gem 'activesupport'
 
 ## Remove this if you don't need a twitter widget.
 gem 'twitter', '>= 5.9.0'
